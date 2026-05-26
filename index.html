@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap" rel="stylesheet">
+
+</head>
+<body class="md:px-12 font-[Manrope] bg-taupe-100">
+    <header class="bg-taupe-100 flex pb-6 sticky top-0 z-20">
+
+        <div class="flex-1">
+            <h1 class="text-xl font-bold underline">Hello world!</h1>
+        </div>
+
+        <div class="flex-none grid grid-cols-3 grid-rows-3 grid-flow-dense gap-1">
+            <p class="transition duration-200 ease-in hover:text-neutral-600 text-sm min-w-20">home</p>
+            <p class="transition duration-200 ease-in hover:text-neutral-600 text-sm">home</p>
+            <p class="transition duration-200 ease-in hover:text-neutral-600 text-sm">home</p>
+            <p class="transition duration-200 ease-in hover:text-neutral-600 text-sm">home</p>
+            <p class="transition duration-200 ease-in hover:text-neutral-600 text-sm">home</p>
+            <p class="transition duration-200 ease-in hover:text-neutral-600 text-sm">home</p>
+            <p class="transition duration-200 ease-in hover:text-neutral-600 text-sm">home</p>
+            <p class="transition duration-200 ease-in hover:text-neutral-600 text-sm">home</p>
+            <p class="transition duration-200 ease-in hover:text-neutral-600 text-sm">home</p>
+        </div>
+    </header>
+
+    <div class="modal flex justify-center">
+        <div class="pb-20">
+            <img class="w-100" src="https://placehold.net/default.png">
+            hello
+        </div>
+    </div>
+
+
+    <main class="grid md:grid-cols-3 justify-items-stretch gap-4">
+        <div class="pb-20 z-10">
+            <img class="gallery hover:opacity-65 transition duration-200 ease-in-out" src="https://placehold.net/default.png">
+            <p class="text-sm text-neutral-400 pt-2">hi</p>
+            <p class="text-xl">hello</p>
+        </div>
+        <div class="pb-20 z-10">
+            <img class="gallery hover:opacity-65 transition duration-200 ease-in-out" src="https://placehold.net/default.png">
+            <p class="text-sm text-neutral-400 pt-2">hi</p>
+            <p class="text-xl">hello</p>
+        </div>
+        <div class="pb-20 z-10">
+            <img class="gallery hover:opacity-65 transition duration-200 ease-in-out" src="https://placehold.net/default.png">
+            <p class="text-sm text-neutral-400 pt-2">hi</p>
+            <p class="text-xl">hello</p>
+        </div>
+        <div class="pb-20 z-10">
+            <img class="gallery hover:opacity-65 transition duration-200 ease-in-out" src="https://placehold.net/default.png">
+            <p class="text-sm text-neutral-400 pt-2">hi</p>
+            <p class="text-xl">hello</p>
+        </div>
+    </main>
+
+
+    <footer class="text-sm text-neutral-400 flex py-6">
+        <div class="flex-1">
+            <a class="transition duration-200 ease-in hover:text-black">
+                social media link
+            </a>
+        </div>
+
+        <div class="flex-none">
+            <a class="transition duration-200 ease-in hover:text-black">
+                copyright info
+            </a>
+        </div>
+    </footer>
+
+    <script>
+      // get the elements
+      // then when clicked
+      // pupup
+      let modal = document.querySelector(".modal")
+      modal.hidden = true
+
+
+      // const openBtn = document.querySelector(".open-modal-btn");
+      // const modal = document.querySelector(".modal-overlay");
+      // const closeBtn = document.querySelector(".close-modal-btn");
+
+      function openModal() {
+          modal.hidden = false
+          modal.scrollIntoView({
+            "behavior": "smooth",
+
+
+          })
+      }
+
+      function closeModal(e, clickedOutside) {
+          // if (clickedOutside) {
+          //     if (e.target.classList.contains("modal-overlay"))
+          //         modal.classList.add("hide");
+          // } else modal.classList.add("hide");
+      }
+
+      let galleryPics = document.querySelectorAll(".gallery")
+
+      galleryPics.forEach((g) => g.addEventListener("click", openModal))
+
+
+      // openBtn.addEventListener("click", openModal);
+      // modal.addEventListener("click", (e) => closeModal(e, true));
+      // closeBtn.addEventListener("click", closeModal);
+
+
+    </script>
+</body>
+</html>
