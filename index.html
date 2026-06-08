@@ -31,7 +31,7 @@
         </div>
     </header>
 
-    <div class="modal flex justify-center">
+    <div class="modal flex justify-center h-dvh cursor-cell">
         <div class="pb-20">
             <img class="w-100" src="https://placehold.net/default.png">
             hello
@@ -82,14 +82,27 @@
       // then when clicked
       // pupup
       let modal = document.querySelector(".modal")
+      let modalImg = document.querySelector(".modal img")
       modal.hidden = true
+
+      let header = document.querySelector("header")
 
 
       // const openBtn = document.querySelector(".open-modal-btn");
       // const modal = document.querySelector(".modal-overlay");
       // const closeBtn = document.querySelector(".close-modal-btn");
 
+      // set
+
+
+
       function openModal() {
+
+        // let availableHeight = window.innerHeight
+        // modalImg.style.height = availableHeight - header.height
+        // modal.style.height = availableHeight - header.height
+        // console.log(availableHeight, modal.style.height, header.height)
+
           modal.hidden = false
           modal.scrollIntoView({
             "behavior": "smooth",
@@ -109,6 +122,18 @@
 
       galleryPics.forEach((g) => g.addEventListener("click", openModal))
 
+      // console.log(modal.width)
+      // function changeCursor(e) {
+      //   // console.log(e.offsetX, e.offsetY)
+
+      //   if (e.offsetX > modal.width) {
+      //     document.body.style.cursor = "cursor.png"
+      //   } else {
+      //     // document.body.style.cursor = ""
+      //   }
+      // }
+
+      // modal.addEventListener("mousemove", changeCursor)
 
       // openBtn.addEventListener("click", openModal);
       // modal.addEventListener("click", (e) => closeModal(e, true));
